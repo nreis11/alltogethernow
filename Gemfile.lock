@@ -8,7 +8,7 @@ GEM
       et-orbi (~> 1.1, >= 1.1.8)
       raabro (~> 1.1)
     raabro (1.1.6)
-    rack (2.0.7)
+    rack (2.1.4.1)
     rufus-scheduler (3.6.0)
       fugit (~> 1.1, >= 1.1.6)
     tzinfo (2.0.0)
