@@ -1,4 +1,4 @@
-const DEBUG = true;
+const DEBUG = false;
 
 var timeChecker; // Var for time interval checker
 var bubbleInterval; // Var for bubble interval cloner
