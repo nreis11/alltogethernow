@@ -1,4 +1,4 @@
-# [All Together Now](https://alltogethernow.herokuapp.com/)
+# [All Together Now](https://nickreis.com/alltogethernow//)
 
 All Together Now is an animation that demonstrates my front-end skills using only HTML, CSS, and JS. It plays like a flash animation, but DOM elements are being manipulated live on the client side without any flash dependencies.
 
@@ -8,4 +8,3 @@ All Together Now is an animation that demonstrates my front-end skills using onl
 # Notes
 
 - Best viewed in Chrome
-- Uses some ES6
