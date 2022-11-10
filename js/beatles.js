@@ -1,3 +1,5 @@
+const DEBUG = true;
+
 var timeChecker; // Var for time interval checker
 var bubbleInterval; // Var for bubble interval cloner
 var audio = document.querySelector("#main-audio");
@@ -273,9 +275,8 @@ function getRandom(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-// let the bubble cloning commence!
 function startBubbleCloner() {
-  bubbleInterval = setInterval(cloneBubbles, 1500);
+  bubbleInterval = setInterval(cloneBubbles, 2000);
 }
 
 function stopBubbleCloner() {
@@ -359,22 +360,23 @@ function getCurrentAudioTime() {
   return audio.currentTime.toFixed(1);
 }
 
-function currentTimeInTimings() {
-  return timings[getCurrentAudioTime()];
-}
-
 // Check if current audio time is in timings hash
 function timingChecker() {
-  console.log(getCurrentAudioTime());
-  if (currentTimeInTimings()) {
-    var command = timings[getCurrentAudioTime()];
+  const currentTime = getCurrentAudioTime();
+  if (DEBUG) {
+    console.log(currentTime);
+  }
+  if (currentTime in timings) {
+    var command = timings[currentTime];
     executeCommand(command);
   }
 }
 
 // Execute command in keyframes
 function executeCommand(command) {
-  console.log("command", command);
+  if (DEBUG) {
+    console.log("command", command);
+  }
   keyFrames[command]();
 }
 
